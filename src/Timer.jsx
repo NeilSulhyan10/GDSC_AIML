@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Timer(){
-    const eventDate = new Date("2024-10-20T09:00:00");
+    const eventDate = new Date("2024-10-21T09:00:00");
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
