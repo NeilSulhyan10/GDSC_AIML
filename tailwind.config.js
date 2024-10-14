@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       animation: {
         pulse: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
