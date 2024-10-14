@@ -1,33 +1,78 @@
-import React from "react";
 import { BackgroundLines } from "./components/ui/background-lines.jsx";
 import Logo from "./assets/logo.png";
+import Img1 from "./assets/1.png";
+import Img2 from "./assets/2.png";
+import Img3 from "./assets/3.png";
+import Img4 from "./assets/4.png";
+import Img5 from "./assets/5.png";
+import Img6 from "./assets/6.png";
+import Img7 from "./assets/7.png";
+import Img8 from "./assets/8.png";
+import Img9 from "./assets/9.png";
+import Img10 from "./assets/10.png";
+import Img11 from "./assets/11.png";
+import Img12 from "./assets/12.png";
+import Img13 from "./assets/13.png";
+import Img14 from "./assets/14.png";
+import Img15 from "./assets/15.png";
+import Img16 from "./assets/16.png";
+import Img17 from "./assets/17.png";
+import Img18 from "./assets/18.png";
+import Img19 from "./assets/18.png";
 import Timer from "./Timer.jsx";
-import AIImage from "./assets/Robo.png";
+import Footer from "./Footer.jsx";
+import Card from "./Card.jsx";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards.jsx";
 
 function App() {
+  const images = [
+    { imageUrl: Img1, name: "Image 1" },
+    { imageUrl: Img4, name: "Image 4" },
+    { imageUrl: Img19, name: "Image 19" },
+    { imageUrl: Img7, name: "Image 7" },
+    { imageUrl: Img14, name: "Image 14" },
+    { imageUrl: Img8, name: "Image 8" },
+    { imageUrl: Img16, name: "Image 16" },
+    { imageUrl: Img9, name: "Image 9" },
+    { imageUrl: Img10, name: "Image 10" },
+    { imageUrl: Img3, name: "Image 3" },
+    { imageUrl: Img11, name: "Image 11" },
+    { imageUrl: Img18, name: "Image 18" },
+    { imageUrl: Img12, name: "Image 12" },
+    { imageUrl: Img5, name: "Image 5" },
+    { imageUrl: Img13, name: "Image 13" },
+    { imageUrl: Img2, name: "Image 2" },
+    { imageUrl: Img15, name: "Image 15" },
+    { imageUrl: Img17, name: "Image 17" },
+    { imageUrl: Img6, name: "Image 6" },
+  ];
+
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  const shuffledImages = shuffleArray([...images]);
+
   const sessions = [
     {
-      title: "Introduction to AIML",
-      date: "October 20, 2024",
+      title: "Session 1",
       description:
         "Kickstart your journey into the world of AI and ML with an introductory session covering the basics.",
       link: "#",
     },
     {
-      title: "Deep Learning Basics",
-      date: "October 27, 2024",
+      title: "Session 2",
       description:
         "Dive deeper into neural networks and discover how deep learning is shaping AI.",
       link: "#",
     },
     {
-      title: "AI/ML Applications",
-      date: "November 3, 2024",
+      title: "Session 3",
       description:
         "Explore real-world applications of AI and ML in various industries and get hands-on with projects.",
       link: "#",
@@ -36,36 +81,16 @@ function App() {
 
   return (
     <>
-      <div className="absolute top-0 left-0 p-2 w-[10%]">
+      <div className="flex justify-start w-[40%]">
         <img src={Logo} alt="Logo" />
       </div>
-      <div className="relative w-full h-full mt-28">
-        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-9xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight animate-pulse mb-8">
-          AIML Bootcamp
+      <div className="relative w-full h-full mt-8 mb-44">
+        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-r from-blue-700 to-pink-700 text-4xl md:text-4xl lg:text-9xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight animate-pulse mb-8">
+          AIML BootCamp
         </h2>
         <Timer />
       </div>
-      <div className="flex flex-col md:flex-row justify-around items-center w-full mt-6 font-poppins space-y-4 md:space-y-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mt-40 p-6">
-        <div className="md:w-1/2 px-4 md:px-0 text-center md:text-left">
-          <h3 className="text-gray-300 text-base md:text-lg lg:text-xl font-medium">
-            Google Developer Students' Club - WCE aims to inculcate the culture
-            of development and problem-solving within local communities using
-            technology.
-            <span className="block mt-4">
-              "Coming together is the beginning. Keeping together is progress.
-              Working together is success."
-            </span>
-          </h3>
-        </div>
-        <div className="md:w-1/2 mt-4 md:mt-0 flex justify-center">
-          <img
-            src={AIImage}
-            alt="AI/ML Representation"
-            className="w-1/2 h-auto"
-          />
-        </div>
-      </div>
-
+      <Card />
       <div>
         <VerticalTimeline>
           {sessions.map((session, index) => (
@@ -102,6 +127,14 @@ function App() {
           ))}
         </VerticalTimeline>
       </div>
+      <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={shuffledImages}
+          direction="right"
+          speed="slow"
+        />
+      </div>
+      <Footer />
       <BackgroundLines />
     </>
   );
