@@ -45,7 +45,7 @@ function App() {
         </h2>
         <Timer />
       </div>
-      <div className="flex flex-col md:flex-row justify-around items-center w-full mt-6 font-poppins space-y-4 md:space-y-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mt-44 p-6">
+      <div className="flex flex-col md:flex-row justify-around items-center w-full mt-6 font-poppins space-y-4 md:space-y-0 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mt-0 p-6">
         <div className="md:w-1/2 px-4 md:px-0 text-center md:text-left">
           <h3 className="text-gray-300 text-base md:text-lg lg:text-xl font-medium">
             Google Developer Students' Club - WCE aims to inculcate the culture
