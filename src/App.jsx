@@ -64,26 +64,26 @@ function App() {
       title: "Session 1",
       description:
         "Kickstart your journey into the world of AI and ML with an introductory session covering the basics.",
-      link: "#",
+      link: "https://gdg.community.dev/events/details/google-gdg-on-campus-walchand-college-of-engineering-sangli-india-presents-aiml-bootcamp/",
     },
     {
       title: "Session 2",
       description:
         "Dive deeper into neural networks and discover how deep learning is shaping AI.",
-      link: "#",
+      link: "https://gdg.community.dev/events/details/google-gdg-on-campus-walchand-college-of-engineering-sangli-india-presents-aiml-bootcamp/",
     },
     {
       title: "Session 3",
       description:
         "Explore real-world applications of AI and ML in various industries and get hands-on with projects.",
-      link: "#",
+      link: "https://gdg.community.dev/events/details/google-gdg-on-campus-walchand-college-of-engineering-sangli-india-presents-aiml-bootcamp/",
     },
   ];
 
   return (
     <>
-      <div className="flex justify-start w-[40%]">
-        <img src={Logo} alt="Logo" />
+      <div className="flex justify-center w-full">
+        <img src={Logo} alt="Logo"  width={"50%"}/>
       </div>
       <div className="relative w-full h-full mt-8 mb-44">
         <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-r from-blue-700 to-pink-700 text-4xl md:text-4xl lg:text-9xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight animate-pulse mb-8">
